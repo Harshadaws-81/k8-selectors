@@ -17,7 +17,7 @@ metadata:
 spec:
   affinity:
     podAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:   # Hard Rule
+      requiredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
           matchExpressions:
           - key: purpose
@@ -29,5 +29,3 @@ spec:
   # EQUIVALENT ---> docker run -d --name nginx nginx:v1 .
   - name: nginx
     image: nginx:stable-perl
-  tolerations:
-  - key: "hardware
