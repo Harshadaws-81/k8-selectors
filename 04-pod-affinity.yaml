@@ -29,3 +29,5 @@ spec:
   # EQUIVALENT ---> docker run -d --name nginx nginx:v1 .
   - name: nginx
     image: nginx:stable-perl
+  tolerations:
+  - key: "hardware
