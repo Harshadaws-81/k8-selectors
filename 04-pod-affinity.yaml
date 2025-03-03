@@ -8,7 +8,7 @@ spec:
   containers:
   # EQUIVALENT ---> docker run -d --name nginx nginx:v1 .
   - name: nginx
-    image: nginx
+    image: nginx:stable-perl
 ---
 apiVersion: v1
 kind: Pod
@@ -28,4 +28,4 @@ spec:
   containers:
   # EQUIVALENT ---> docker run -d --name nginx nginx:v1 .
   - name: nginx
-    image: nginx
+    image: nginx:stable-perl
