@@ -17,8 +17,8 @@ spec:
   # EQUIVALENT ---> docker run -d --name nginx nginx:v1 .
   - name: nginx
     image: nginx
-  nodeSelector:
-    hardware: gpu
+  # nodeSelector:
+  #   hardware: gpu
   tolerations:
   - key: "hardware"
     operator: "Equal"
