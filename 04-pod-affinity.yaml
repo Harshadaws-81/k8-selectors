@@ -1,18 +1,18 @@
 apiVersion: v1
 kind: Pod
-metadata: 
+metadata:
   name: pod-1
   labels:
     purpose: affinity
 spec:
   containers:
-  # EQUIVALENT ---> docker run -d --name nginx nginx:v1 .
+  # docker run -d --name nginx nginx
   - name: nginx
-    image: nginx:stable-perl
+    image: nginx
 ---
 apiVersion: v1
 kind: Pod
-metadata: 
+metadata:
   name: pod-2
 spec:
   affinity:
@@ -23,9 +23,9 @@ spec:
           - key: purpose
             operator: In
             values:
-            - pod-1
+            - affinity
         topologyKey: topology.kubernetes.io/zone
   containers:
-  # EQUIVALENT ---> docker run -d --name nginx nginx:v1 .
+  # docker run -d --name nginx nginx
   - name: nginx
-    image: nginx:stable-perl
+    image: nginx
