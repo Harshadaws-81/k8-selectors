@@ -7,10 +7,10 @@ spec:
   # EQUIVALENT ---> docker run -d --name nginx nginx:v1 .
   - name: nginx
     image: nginx
-  nodeSelector:
-    hardware: gpu
-  tolerations:
-  - key: "hardware"
-    operator: "Equal"
-    value: "gpu"
-    effect: "NoSchedule"  
+  # nodeSelector:
+  #   hardware: gpu
+  # tolerations:
+  # - key: "hardware"
+  #   operator: "Equal"
+  #   value: "gpu"
+  #   effect: "NoSchedule"  
